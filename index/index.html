@@ -13,8 +13,8 @@
     <script type="text/javascript">
       const SIGNING_DOMAIN_NAME = "Voucher-Domain";
       const SIGNING_DOMAIN_VERSION = "1";
-      const chainId = 1;
-      const contractAddress = "0xD7ACd2a9FD159E69Bb102A1ca21C9a3e3A5F771B"; // Put the address here from remix
+      const chainId = 11155111;
+      const contractAddress = "0x45d5082a121b00e2a27027BAF02B1eF234a62661"; // Put the address here from remix
       const signer = new ethers.Wallet(
         "9f77f13bfffc84b7d4213d859586c3a2b63897d1b790f71af7865d09513ed6d9"
       ); // private key that I use for address
@@ -47,10 +47,10 @@
 
       async function main() {
         const voucher = await createVoucher(
-          1,
+          2,
           50,
           "uri",
-          "0x577b282078912c354b3f4b503c97Bf2770eCe2cC"
+          "0xbacc6190933B10E7D4721b75F2F9910D8aa59eB2"
         ); // the address is the address which receives the NFT
         console.log(
           `[${voucher.tokenId}, ${voucher.price}, "${voucher.uri}", "${voucher.buyer}", "${voucher.signature}"]`
